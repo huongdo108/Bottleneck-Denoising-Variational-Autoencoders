@@ -22,7 +22,7 @@ trained with an MSE loss is able to encode the shapes of the digits in the bottl
 
 
 ## Bottleneck Autoencoder
-I trained a deep autoencoders with only fully-connected layers. The architecture has 2 components: Encoder and Decoder.
+I trained a deep autoencoders with only fully-connected layers. The architecture has 2 components: Encoder and Decoder. Encoder reduces the dimensionality of the MNIST data from  28×28=784  to  10, decoder reconstructs the dimensionality to 784. 
 
 **Encoder**
 
@@ -59,6 +59,8 @@ Let's visualize the latent space. It it observed that the model does a good job 
 **Test the quality of the produced embeddings by classification**
 
 <img src="https://github.com/huongdo108/Bottleneck-Denoising-Variational-Autoencoders/blob/master/images/bottleneck_quality.PNG" align="centre">
+
+Using a very simple linear classifier, the encoded images are classified with a good accuracy, which is the evidence that the structure of the data is well preserved in the embedding space.
 
 ## Denoising Autoencoder
 
