@@ -137,8 +137,7 @@ To guarantee that the variance is positive, we parameterize it as <img src="http
 
 One term of the loss function minimized during training of a VAE is the Kullback-Leibler divergence between the approximate distribution of the latent codes  <img src="https://render.githubusercontent.com/render/math?math=q(z) = \mathcal{N}(z \mid \mu_z, \sigma^2_z)"> and the prior distribution <img src="https://render.githubusercontent.com/render/math?math=p(z) = \mathcal{N}(z \mid 0, I)">:
 
-<img src="https://render.githubusercontent.com/render/math?math=\sum_{i=1}^N
-    - \int q(z_i) \log \frac{q(z_i)}{p(z_i)} dz_i">
+<img src="https://render.githubusercontent.com/render/math?math=\sum_{i=1}^N - \int q(z_i) \log \frac{q(z_i)}{p(z_i)} dz_i">
 
 where **N** is the number of samples (batch size in the implementation).
 
